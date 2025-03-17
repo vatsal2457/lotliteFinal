@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import dbConnection from '../db/db.js';
 import { errorMiddleware } from '../error/error.js';
 import reservationRoute from '../routes/reservationRoute.js';
+import adminRoutes from '../routes/adminRoutes.js';
+import contactRoutes from '../routes/contactRoutes.js';
 
 const app = express();
 
@@ -26,6 +28,8 @@ dbConnection();
 
 // API routes
 app.use('/api/v1/reservation', reservationRoute);
+app.use('/api/v1/admin', adminRoutes);
+app.use('/api/v1/contacts', contactRoutes);
 
 // Test route
 app.get('/api/test', (req, res) => {

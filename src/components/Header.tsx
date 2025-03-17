@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
@@ -15,7 +15,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-           
+            <Logo />
             <span className="ml-2 text-xl font-semibold text-[#0077B5]">Lotelite Technology</span>
           </Link>
           
@@ -47,6 +47,10 @@ const Header = () => {
             </Link>
             <Link to="/contact-us" className="px-4 py-2 bg-[#0077B5] text-white font-medium rounded-md hover:bg-[#005d8f] transition-colors">
               Contact Us
+            </Link>
+            <Link to="/admin/login" className="px-4 py-2 text-gray-600 font-medium border border-gray-300 rounded-md hover:bg-gray-50 transition-colors flex items-center gap-2">
+              <Lock className="h-4 w-4" />
+              Admin
             </Link>
           </div>
           
@@ -86,6 +90,10 @@ const Header = () => {
                 </Link>
                 <Link to="/contact-us" className="w-full px-4 py-2 bg-[#0077B5] text-white font-medium rounded-md hover:bg-[#005d8f] transition-colors">
                   Contact Us
+                </Link>
+                <Link to="/admin/login" className="w-full px-4 py-2 text-gray-600 font-medium border border-gray-300 rounded-md hover:bg-gray-50 transition-colors flex items-center justify-center gap-2">
+                  <Lock className="h-4 w-4" />
+                  Admin Login
                 </Link>
               </div>
             </div>
