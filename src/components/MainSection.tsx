@@ -15,17 +15,17 @@ const MainSection = () => {
   const slides = [
     {
       id: 1,
-      image: "/src/images/1741581292597.jpg",
+      image: "c1.jpg",
       alt: "Tech Education"
     },
     {
       id: 2,
-      image: "/src/images/1741581292500.jpg",
+      image: "c2.jpg",
       alt: "Coding"
     },
     {
       id: 3,
-      image: "/src/images/1741581292216.jpg",
+      image: "c3.jpg",
       alt: "Business"
     }
   ];
