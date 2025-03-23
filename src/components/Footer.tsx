@@ -30,14 +30,13 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Programs</h3>
+            <h3 className="text-lg font-semibold mb-4">Our Work</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Data Science</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Software Development</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Digital Marketing</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Foriegn Deegree </a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Foriegn Exchange Programs</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Product Management</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">College Workshops</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Offline Webinars</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Cyber Security Training</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Delivered Training Project</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Live Projects</a></li>
             </ul>
           </div>
           
