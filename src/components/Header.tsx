@@ -16,7 +16,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <Logo />
-            <span className="ml-2 text-xl font-semibold text-[#0077B5]">Lotelite Technology</span>
+            <span className="ml-2 text-xl font-semibold text-[#0077B5]">Technology</span>
           </Link>
           
           {/* Desktop Navigation */}
