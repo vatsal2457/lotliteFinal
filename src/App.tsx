@@ -17,6 +17,7 @@ import CorporatePartnerProgram from './pages/CorporatePartnerProgram';
 import ITServices from './pages/ITServices';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
                   <Route path="/it-services" element={<ITServices />} />
                   <Route path="/contact-us" element={<Contact />} />
                   <Route path="/career" element={<Career />} />
+                  <Route path="/about-us" element={<AboutUs />} />
                 </Routes>
                 <Footer />
                 <WhatsAppButton 
