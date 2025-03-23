@@ -323,11 +323,7 @@ const AboutUs = () => {
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <img
-                    src="/about-five2.png"
-                    alt="UK Business Partner"
-                    className="w-full h-64 object-cover rounded-lg shadow-md"
-                  />
+                  
                 </div>
                 <div>
                   <h3 className="text-2xl font-semibold mb-4 text-gray-900">Strategic Partnership</h3>
@@ -363,11 +359,7 @@ const AboutUs = () => {
                   </p>
                 </div>
                 <div className="order-1 md:order-2">
-                  <img
-                    src="/c2.jpg"
-                    alt="Blockchain Partner"
-                    className="w-full h-64 object-cover rounded-lg shadow-md"
-                  />
+                  
                 </div>
               </div>
             </div>
@@ -385,11 +377,7 @@ const AboutUs = () => {
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <img
-                    src="/c3.jpg"
-                    alt="Security Partner"
-                    className="w-full h-64 object-cover rounded-lg shadow-md"
-                  />
+                 
                 </div>
                 <div>
                   <h3 className="text-2xl font-semibold mb-4 text-gray-900">Cybersecurity Excellence</h3>
@@ -425,11 +413,7 @@ const AboutUs = () => {
                   </p>
                 </div>
                 <div className="order-1 md:order-2">
-                  <img
-                    src="/inti.jpg"
-                    alt="Expert Partner"
-                    className="w-full h-64 object-cover rounded-lg shadow-md"
-                  />
+                 
                 </div>
               </div>
             </div>
