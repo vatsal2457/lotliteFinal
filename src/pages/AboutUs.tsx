@@ -11,7 +11,8 @@ const AboutUs: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-8">
               <div className="md:w-1/3">
                 <img src="/about-five1.png" alt="About Lotlite Technology" className="w-full h-auto rounded-lg shadow-md mb-4" />
-                <img src="/about-five2.png" alt="About Lotlite Technology" className="w-full h-auto rounded-lg shadow-md" />
+                <img src="/about-five2.png" alt="About Lotlite Technology" className="w-full h-auto rounded-lg shadow-md mb-4" />
+                <img src="/inti.jpg" alt="About Lotlite Technology" className="w-full h-auto rounded-lg shadow-md" />
               </div>
               <div className="md:w-2/3 space-y-6">
                 <p className="text-gray-600 leading-relaxed">
