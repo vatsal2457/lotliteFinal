@@ -1,7 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -30,25 +29,26 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Our Work</h3>
+            <h3 className="text-lg font-semibold mb-4">Programs</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">College Workshops</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Offline Webinars</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Cyber Security Training</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Delivered Training Project</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Live Projects</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Data Science</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Software Development</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Digital Marketing</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Foriegn Deegree </a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Foriegn Exchange Programs</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Product Management</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/about-us" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/career" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Partners</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Press</a></li>
-              <li><Link to="/contact-us" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
           

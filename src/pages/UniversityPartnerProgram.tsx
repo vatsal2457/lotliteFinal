@@ -2,54 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Carousel from 'react-spring-3d-carousel';
 import CollegeSection from '../components/CollegeSection';
-import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import 'react-pdf/dist/esm/Page/TextLayer.css';
-
-// Set up PDF.js worker
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const UniversityPartnerProgram = () => {
   const [goToSlide, setGoToSlide] = useState(0);
-  const [numPages, setNumPages] = useState<number | null>(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const [selectedUniversity, setSelectedUniversity] = useState<string | null>(null);
 
   // Auto-rotate carousel
   useEffect(() => {
     const timer = setInterval(() => {
       setGoToSlide((prev) => (prev + 1) % slides.length);
-    }, 3000);
+    }, 3000); // Change slide every 3 seconds
 
     return () => clearInterval(timer);
   }, []);
-
-  function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
-    setNumPages(numPages);
-  }
-
-  const partnerUniversities = [
-    {
-      name: "INTI University Malaysia",
-      mouUrl: "/mous/inti-mou.pdf"
-    },
-    {
-      name: "Skyline University Sharjah, United Arab Emirates",
-      mouUrl: "/mous/skyline-mou.pdf"
-    },
-    {
-      name: "University of Toronto, Canada",
-      mouUrl: "/mous/toronto-mou.pdf"
-    },
-    {
-      name: "ETH Zurich, Switzerland",
-      mouUrl: "/mous/eth-mou.pdf"
-    },
-    {
-      name: "University of Melbourne, Australia",
-      mouUrl: "/mous/melbourne-mou.pdf"
-    }
-  ];
 
   const slides = [
     {
@@ -115,27 +79,46 @@ const UniversityPartnerProgram = () => {
               </p>
 
               <ul className="space-y-4 mb-8">
-                {partnerUniversities.map((university, index) => (
-                  <li key={index} className="flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      <div className="bg-white/20 rounded-full p-2">
-                        <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                        </svg>
-                      </div>
-                      <span className="text-white font-medium">{university.name}</span>
-                    </div>
-                    <button
-                      onClick={() => setSelectedUniversity(selectedUniversity === university.name ? null : university.name)}
-                      className="text-white hover:text-yellow-400 transition-colors"
-                    >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                      </svg>
-                    </button>
-                  </li>
-                ))}
+                <li className="flex items-center gap-3">
+                  <div className="bg-white/20 rounded-full p-2">
+                    <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span className="text-white font-medium">INTI University Malaysia</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="bg-white/20 rounded-full p-2">
+                    <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span className="text-white font-medium">Skyline University Sharjah, United Arab Emirates</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="bg-white/20 rounded-full p-2">
+                    <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span className="text-white font-medium">University of Toronto, Canada</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="bg-white/20 rounded-full p-2">
+                    <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span className="text-white font-medium">ETH Zurich, Switzerland</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="bg-white/20 rounded-full p-2">
+                    <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span className="text-white font-medium">University of Melbourne, Australia</span>
+                </li>
               </ul>
 
               <Link to="/contact-us" className="inline-block px-8 py-4 bg-white text-[#0077B5] font-bold rounded-full hover:bg-gray-100 transition-colors text-lg">
@@ -143,90 +126,39 @@ const UniversityPartnerProgram = () => {
               </Link>
             </div>
 
-            {/* Right side - PDF Viewer or Carousel */}
+            {/* Right side - 3D Carousel */}
             <div className="md:w-7/12">
-              {selectedUniversity ? (
-                <div className="bg-white rounded-lg shadow-lg p-4">
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="text-xl font-semibold text-gray-900">Memorandum of Understanding</h3>
+              <div className="relative h-[500px]">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl backdrop-blur-sm"></div>
+                <Carousel
+                  slides={slides}
+                  goToSlide={goToSlide}
+                  offsetRadius={2}
+                  showNavigation={false}
+                  animationConfig={{ tension: 120, friction: 14 }}
+                />
+                
+                {/* Carousel indicators */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
+                  {slides.map((_, index) => (
                     <button
-                      onClick={() => setSelectedUniversity(null)}
-                      className="text-gray-500 hover:text-gray-700"
-                    >
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    </button>
-                  </div>
-                  <div className="h-[500px] overflow-auto">
-                    <Document
-                      file={partnerUniversities.find(u => u.name === selectedUniversity)?.mouUrl}
-                      onLoadSuccess={onDocumentLoadSuccess}
-                      className="flex flex-col items-center"
-                    >
-                      <Page
-                        pageNumber={pageNumber}
-                        width={500}
-                        renderTextLayer={false}
-                        renderAnnotationLayer={false}
-                      />
-                    </Document>
-                  </div>
-                  {numPages && (
-                    <div className="flex justify-center items-center gap-4 mt-4">
-                      <button
-                        onClick={() => setPageNumber(page => Math.max(1, page - 1))}
-                        disabled={pageNumber <= 1}
-                        className="px-4 py-2 bg-blue-600 text-white rounded disabled:bg-gray-400"
-                      >
-                        Previous
-                      </button>
-                      <span className="text-gray-600">
-                        Page {pageNumber} of {numPages}
-                      </span>
-                      <button
-                        onClick={() => setPageNumber(page => Math.min(numPages, page + 1))}
-                        disabled={pageNumber >= numPages}
-                        className="px-4 py-2 bg-blue-600 text-white rounded disabled:bg-gray-400"
-                      >
-                        Next
-                      </button>
-                    </div>
-                  )}
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        goToSlide === index 
+                          ? 'w-8 bg-white' 
+                          : 'bg-white/50'
+                      }`}
+                      onClick={() => setGoToSlide(index)}
+                    />
+                  ))}
                 </div>
-              ) : (
-                <div className="relative h-[500px]">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl backdrop-blur-sm"></div>
-                  <Carousel
-                    slides={slides}
-                    goToSlide={goToSlide}
-                    offsetRadius={2}
-                    showNavigation={false}
-                    animationConfig={{ tension: 120, friction: 14 }}
-                  />
-                  
-                  {/* Carousel indicators */}
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
-                    {slides.map((_, index) => (
-                      <button
-                        key={index}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          goToSlide === index 
-                            ? 'w-8 bg-white' 
-                            : 'bg-white/50'
-                        }`}
-                        onClick={() => setGoToSlide(index)}
-                      />
-                    ))}
-                  </div>
 
-                  {/* Stats badge */}
-                  <div className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-lg p-4 backdrop-blur-sm bg-white/90">
-                    <p className="font-bold text-gray-800 text-2xl">50+</p>
-                    <p className="text-sm text-gray-600">Partner institutions</p>
-                  </div>
+                {/* Stats badge */}
+                <div className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-lg p-4 backdrop-blur-sm bg-white/90">
+                  <p className="font-bold text-gray-800 text-2xl">50+</p>
+                  <p className="text-sm text-gray-600">Partner institutions</p>
                 </div>
-              )}
+              </div>
             </div>
           </div>
         </div>
