@@ -3,8 +3,68 @@ import { Link } from 'react-router-dom';
 import Carousel from 'react-spring-3d-carousel';
 import CollegeSection from '../components/CollegeSection';
 
+// PDF Viewer Modal Component
+const PDFViewerModal = ({ isOpen, onClose, pdfUrl }: { isOpen: boolean; onClose: () => void; pdfUrl: string }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 overflow-y-auto">
+      <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+        <div className="fixed inset-0 transition-opacity" aria-hidden="true">
+          <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+
+        <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+          <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div className="sm:flex sm:items-start">
+              <div className="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-lg leading-6 font-medium text-gray-900">Memorandum of Understanding</h3>
+                  <button
+                    onClick={onClose}
+                    className="text-gray-400 hover:text-gray-500 focus:outline-none"
+                  >
+                    <span className="sr-only">Close</span>
+                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div className="mt-2 h-[600px]">
+                  <iframe
+                    src={pdfUrl}
+                    className="w-full h-full"
+                    title="MOU PDF Viewer"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const UniversityPartnerProgram = () => {
   const [goToSlide, setGoToSlide] = useState(0);
+  const [selectedMOU, setSelectedMOU] = useState<string | null>(null);
+
+  // MOU URLs mapping
+  const mouUrls: { [key: string]: string } = {
+    'INTI University': '/mous/Inti international University.pdf',
+    'Skyline University Sharjah': '/mous/Skyline university college.pdf',
+    'University of Toronto': '/mous/University of Toronto.pdf',
+    'MIT World Peace University': '/mous/MIT World Peace University.pdf',
+    'MIT Loni': '/mous/Mit Loni kalbhor.pdf',
+    'Raffles University': '/mous/Raffles University.pdf',
+    'Chandigarh University': '/mous/Chandigarh University.pdf',
+    'PVG COET University': '/mous/PVG\'s Coet & GKPIM.pdf'
+  };
+
+  const handleViewMOU = (universityName: string) => {
+    setSelectedMOU(mouUrls[universityName]);
+  };
 
   // Auto-rotate carousel
   useEffect(() => {
@@ -369,7 +429,15 @@ const UniversityPartnerProgram = () => {
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Business</span>
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Sciences</span>
                   </div>
-                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                  <div className="flex gap-4">
+                    <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                    <button
+                      onClick={() => handleViewMOU('INTI University')}
+                      className="text-green-600 font-medium hover:underline"
+                    >
+                      View MOU →
+                    </button>
+                  </div>
                 </div>
 
                 {/* Skyline University */}
@@ -388,7 +456,15 @@ const UniversityPartnerProgram = () => {
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Medicine</span>
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Law</span>
                   </div>
-                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                  <div className="flex gap-4">
+                    <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                    <button
+                      onClick={() => handleViewMOU('Skyline University Sharjah')}
+                      className="text-green-600 font-medium hover:underline"
+                    >
+                      View MOU →
+                    </button>
+                  </div>
                 </div>
 
                 {/* University of Toronto */}
@@ -407,7 +483,15 @@ const UniversityPartnerProgram = () => {
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Social Sciences</span>
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Management</span>
                   </div>
-                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                  <div className="flex gap-4">
+                    <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                    <button
+                      onClick={() => handleViewMOU('University of Toronto')}
+                      className="text-green-600 font-medium hover:underline"
+                    >
+                      View MOU →
+                    </button>
+                  </div>
                 </div>
 
                 {/* MIT World Peace University */}
@@ -426,7 +510,15 @@ const UniversityPartnerProgram = () => {
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Engineering</span>
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Business</span>
                   </div>
-                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                  <div className="flex gap-4">
+                    <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                    <button
+                      onClick={() => handleViewMOU('MIT World Peace University')}
+                      className="text-green-600 font-medium hover:underline"
+                    >
+                      View MOU →
+                    </button>
+                  </div>
                 </div>
 
                 {/* MIT Loni */}
@@ -445,7 +537,15 @@ const UniversityPartnerProgram = () => {
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Technology</span>
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Science</span>
                   </div>
-                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                  <div className="flex gap-4">
+                    <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                    <button
+                      onClick={() => handleViewMOU('MIT Loni')}
+                      className="text-green-600 font-medium hover:underline"
+                    >
+                      View MOU →
+                    </button>
+                  </div>
                 </div>
 
                 {/* Raffles University */}
@@ -464,7 +564,15 @@ const UniversityPartnerProgram = () => {
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Business</span>
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Technology</span>
                   </div>
-                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                  <div className="flex gap-4">
+                    <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                    <button
+                      onClick={() => handleViewMOU('Raffles University')}
+                      className="text-green-600 font-medium hover:underline"
+                    >
+                      View MOU →
+                    </button>
+                  </div>
                 </div>
 
                 {/* Chandigarh University */}
@@ -483,7 +591,15 @@ const UniversityPartnerProgram = () => {
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Technology</span>
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Business</span>
                   </div>
-                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                  <div className="flex gap-4">
+                    <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                    <button
+                      onClick={() => handleViewMOU('Chandigarh University')}
+                      className="text-green-600 font-medium hover:underline"
+                    >
+                      View MOU →
+                    </button>
+                  </div>
                 </div>
 
                 {/* PVG COET University */}
@@ -502,7 +618,15 @@ const UniversityPartnerProgram = () => {
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Technology</span>
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Science</span>
                   </div>
-                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                  <div className="flex gap-4">
+                    <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                    <button
+                      onClick={() => handleViewMOU('PVG COET University')}
+                      className="text-green-600 font-medium hover:underline"
+                    >
+                      View MOU →
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -553,6 +677,13 @@ const UniversityPartnerProgram = () => {
           </div>
         </div>
       </div>
+
+      {/* PDF Viewer Modal */}
+      <PDFViewerModal
+        isOpen={!!selectedMOU}
+        onClose={() => setSelectedMOU(null)}
+        pdfUrl={selectedMOU || ''}
+      />
     </div>
   );
 };
