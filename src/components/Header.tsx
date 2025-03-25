@@ -37,7 +37,7 @@ const Header = () => {
               Foreign Degree
             </Link>
             <Link to="/university-partner-program" className="text-gray-700 hover:text-[#0077B5] font-medium text-sm transition-colors duration-200">
-              University Partner
+              University Partner Program
             </Link>
           </nav>
           
