@@ -352,13 +352,13 @@ const UniversityPartnerProgram = () => {
                 We collaborate with prestigious educational institutions worldwide to offer unparalleled academic opportunities
               </p>
 
-              <div className="grid md:grid-cols-3 gap-8">
-                {/* University 1 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* INTI University */}
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
                   <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
                     <img 
                       src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
-                      alt="University Campus"
+                      alt="INTI University Campus"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -372,16 +372,16 @@ const UniversityPartnerProgram = () => {
                   <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
                 </div>
 
-                {/* University 2 */}
+                {/* Skyline University */}
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
                   <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
                     <img 
                       src="https://images.unsplash.com/photo-1592280771190-3e2e4d977758?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                      alt="University Campus"
+                      alt="Skyline University Campus"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">Skyline University Sharjah, United Arab Emirates</h3>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">Skyline University Sharjah</h3>
                   <p className="text-gray-600 mb-4">United Arab Emirates</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Computer Science</span>
@@ -391,12 +391,12 @@ const UniversityPartnerProgram = () => {
                   <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
                 </div>
 
-                {/* University 3 */}
+                {/* University of Toronto */}
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
                   <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
                     <img 
                       src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
-                      alt="University Campus"
+                      alt="University of Toronto Campus"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -406,6 +406,101 @@ const UniversityPartnerProgram = () => {
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Arts</span>
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Social Sciences</span>
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Management</span>
+                  </div>
+                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                </div>
+
+                {/* MIT World Peace University */}
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+                  <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                      alt="MIT World Peace University Campus"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">MIT World Peace University</h3>
+                  <p className="text-gray-600 mb-4">India</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Technology</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Engineering</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Business</span>
+                  </div>
+                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                </div>
+
+                {/* MIT Loni */}
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+                  <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                      alt="MIT Loni Campus"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">MIT Loni</h3>
+                  <p className="text-gray-600 mb-4">India</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Engineering</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Technology</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Science</span>
+                  </div>
+                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                </div>
+
+                {/* Raffles University */}
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+                  <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1627556704302-624286467c65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                      alt="Raffles University Campus"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">Raffles University</h3>
+                  <p className="text-gray-600 mb-4">India</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Design</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Business</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Technology</span>
+                  </div>
+                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                </div>
+
+                {/* Chandigarh University */}
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+                  <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                      alt="Chandigarh University Campus"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">Chandigarh University</h3>
+                  <p className="text-gray-600 mb-4">India</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Engineering</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Technology</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Business</span>
+                  </div>
+                  <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
+                </div>
+
+                {/* PVG COET University */}
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+                  <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                      alt="PVG COET University Campus"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">PVG COET University</h3>
+                  <p className="text-gray-600 mb-4">India</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Engineering</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Technology</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Science</span>
                   </div>
                   <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
                 </div>
