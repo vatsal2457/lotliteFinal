@@ -433,7 +433,7 @@ const UniversityPartnerProgram = () => {
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
                   <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+                      src="/WhatsApp Image 2025-03-29 at 2.30.02 PM.jpeg"
                       alt="INTI University Campus"
                       className="w-full h-full object-cover"
                     />
@@ -568,7 +568,7 @@ const UniversityPartnerProgram = () => {
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
                   <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1627556704302-624286467c65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                      src="/raffle-uni.jpeg"
                       alt="Raffles University Campus"
                       className="w-full h-full object-cover"
                     />
