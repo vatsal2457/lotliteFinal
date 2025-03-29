@@ -514,7 +514,7 @@ const UniversityPartnerProgram = () => {
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
                   <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                      src="/mit.jpeg"
                       alt="MIT World Peace University Campus"
                       className="w-full h-full object-cover"
                     />
