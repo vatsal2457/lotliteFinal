@@ -460,7 +460,7 @@ const UniversityPartnerProgram = () => {
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
                   <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1592280771190-3e2e4d977758?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                      src="/WhatsApp Image 2025-03-29 at 1.40.52 PM.jpeg"
                       alt="Skyline University Campus"
                       className="w-full h-full object-cover"
                     />
