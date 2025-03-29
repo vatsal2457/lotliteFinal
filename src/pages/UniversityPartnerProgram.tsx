@@ -483,33 +483,6 @@ const UniversityPartnerProgram = () => {
                   </div>
                 </div>
 
-                {/* University of Toronto */}
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
-                  <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
-                    <img 
-                      src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
-                      alt="University of Toronto Campus"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">University of Toronto</h3>
-                  <p className="text-gray-600 mb-4">Canada</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Arts</span>
-                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Social Sciences</span>
-                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Management</span>
-                  </div>
-                  <div className="flex gap-4">
-                    <a href="#" className="text-blue-600 font-medium hover:underline">View Programs →</a>
-                    <button
-                      onClick={() => handleViewMOU('University of Toronto')}
-                      className="text-green-600 font-medium hover:underline"
-                    >
-                      View MOU →
-                    </button>
-                  </div>
-                </div>
-
                 {/* MIT World Peace University */}
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
                   <div className="h-48 rounded-xl bg-gray-200 mb-6 overflow-hidden">
